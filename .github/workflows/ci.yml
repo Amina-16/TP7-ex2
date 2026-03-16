@@ -26,7 +26,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/tp3 .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/tp .
 
     - name: Login to DockerHub
       uses: docker/login-action@v2
@@ -36,4 +36,4 @@ jobs:
 
     - name: Push image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/tp3
+        docker push ${{ secrets.DOCKER_USERNAME }}/tp
